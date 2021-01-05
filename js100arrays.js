@@ -3,7 +3,11 @@
 // 1. Write a function that returns the first element of an input array. For example:
 // What would you return if the input array was empty? Would return undefined.
 
-let planets = ['Earth', 'Moon', 'Mars'];
+let planets = [
+  'Earth',
+  'Moon',
+  'Mars'
+];
 /*
 function first(arr) {
   return arr[0];
@@ -44,7 +48,14 @@ console.log(Array.from(alphabet));
 
 // 5. Count the number of elements in scores that are 100 or above.
 
-let scores = [96, 47, 113, 89, 100, 102];
+let scores = [
+  96,
+  47,
+  113,
+  89,
+  100,
+  102
+];
 /*
 let count = 0;
 
@@ -85,9 +96,24 @@ console.log(highScoresCount.length);
 // 6. We've been given an array of vocabulary words grouped into sub-arrays by meaning. This is a two-dimensional array or a nested array. Write some code that iterates through the sub-arrays and logs each vocabulary word to the console.
 
 let vocabulary = [
-  ['happy', 'cheerful', 'merry', 'glad'],
-  ['tired', 'sleepy', 'fatigued', 'drained'],
-  ['excited', 'eager', 'enthused', 'animated']
+  [
+    'happy',
+    'cheerful',
+    'merry',
+    'glad'
+  ],
+  [
+    'tired',
+    'sleepy',
+    'fatigued',
+    'drained'
+  ],
+  [
+    'excited',
+    'eager',
+    'enthused',
+    'animated'
+  ]
 ];
 /*
 for (let i = 0; i < vocabulary.length; i++) {
@@ -128,9 +154,21 @@ console.log(filter(nums));
 
 // 9. The destinations array contains a list of travel destinations. Write a function that checks whether or not a particular destination is included within destinations, without using the built-in method Array.prototype.includes().
 
-let destinations = ['Prague', 'London', 'Sydney', 'Belfast', 'Rome',
-  'Aruba', 'Paris', 'Bora Bora', 'Barcelona', 'Rio de Janeiro',
-  'Marrakesh', 'New York City'];
+let destinations = [
+  'Prague',
+  'London',
+  'Sydney',
+  'Belfast',
+  'Rome',
+  'Aruba',
+  'Paris',
+  'Bora Bora',
+  'Barcelona',
+  'Rio de Janeiro',
+  'Marrakesh',
+  'New York City'
+];
+
 /*
 function contains(city, arr) {
   for (let el of arr) {
@@ -138,7 +176,7 @@ function contains(city, arr) {
       return true;
     }
   }
-  return false; // return for false has to be here outside of for block.
+  return false; // return for false has to be here outside of for block. do not fully understand why it doesn't work inside
 }
 
   console.log(contains('Naples', destinations)); // true
@@ -155,8 +193,32 @@ console.log(contains('Paris', destinations));
 */
 
 // 10. We generated parts of a passcode and now want to combine them into a string. Write some code that returns a string, with each portion of the passcode separated by a hyphen (-).
+let passcode = [
+  '11',
+  'jZ5',
+  'hQ3f*',
+  '8!7g3',
+  'p3Fs'
+];
+
+let newCode = passcode.join('-');
+console.log(newCode);
+
 /*
 let passcode = ['11', 'jZ5', 'hQ3f*', '8!7g3', 'p3Fs'];
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let passcode2 = passcode.join('-');
 console.log(passcode2);
@@ -168,7 +230,21 @@ console.log(passcode3);
 
 // 11. Write code that removes the items from 'groceryList' one by one, until it is empty. If you log the elements you remove, the expected behavior would look as follows.
 
-let groceryList = ['paprika', 'tofu', 'garlic', 'quinoa', 'carrots', 'broccoli', 'hummus'];
+let groceryList = [
+  'paprika',
+  'tofu',
+  'garlic',
+  'quinoa',
+  'carrots',
+  'broccoli',
+  'hummus'
+];
+
+for (let i = 0; i < groceryList.length; ) {
+  let removedItem = groceryList.shift();
+  console.log(removedItem, 'yo');
+}
+
 /*
 for (let i = 0; i < groceryList.length;) {
   let removedItem;
@@ -186,12 +262,3 @@ while (groceryList.length > 0) {
   console.log(removedItem);
 }
 console.log(groceryList);
-
-
-
-
-
-
-
-
-
